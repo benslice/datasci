@@ -1,0 +1,29 @@
+Question is whether I install into a virtual ENV or not. It is already somewhat containerized, the 
+whole thing is on a VM. 
+
+
+Currently I have lots of stuff installed globally via pacman. If I activate the 
+environment, all of these packges don't show up when I run pip. _However, I can 
+activate them_. FALSE, I called ipython, which was not installed in the virtual 
+env, so it spun up the global copy, which _can_ import the global packages.
+
+
+### virtualenv Pros:
+  1. isolate dependancies
+  2. may ease cloud deployment
+  
+### virtualenv Cons:
+  1. Increased complexity
+  2. not sure lab knows HOW to run in a venv
+  3. Could use pacman instead (this is inherently less portable)
+  
+  
+Summary, I think that I will _not_ use virtual envs yet. The pros are all theoretical, and the cons
+are not. I'm not even up to one project yet, and the choice of manjaro should ease the problems that
+I saw with arch because it is not rolling / constantly updating. Also, the whole point of Jupyter 
+lab is remote access. So portability is really less of an issue than it was before.
+
+I think I'll install everything that I can using pacman, and pip for everything else. I would like
+a tool that iterates through packages and lets me know which belong to pip, and which to pacman.
+(pip will list both). Also, can I prevent pip from trying to update packages that belong to pacman
+  
